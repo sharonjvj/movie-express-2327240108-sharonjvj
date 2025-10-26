@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "f8cb701b-0085-4485-a63c-0f2fccdde63c",
+		"name": "Movie-express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49457634",
+		"_collection_link": "https://sharonjvj-4679384.postman.co/workspace/Sharon's-Workspace~efa751ae-1b19-4fe3-8f93-a80d516f2d5d/collection/49457634-f8cb701b-0085-4485-a63c-0f2fccdde63c?action=share&source=collection_link&creator=49457634"
+	},
+	"item": [
+		{
+			"name": "Add Movie",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Movie List",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update Movie",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
