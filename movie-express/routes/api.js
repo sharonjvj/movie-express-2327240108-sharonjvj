@@ -1,12 +1,19 @@
-import express from "express"
-import * as movieController from "../controllers/movieController.js"
+import express from "express";
+import * as movieController from "../controllers/movieController.js";
+import * as userController from "../controllers/userController.js";
+import { authenticateTokenMiddleware } from "../middlewares/authenticateTokenMiddleware.js";
 
 const api = express.Router()
 
-api.get("/movies", movieController.movieList)
-api.post("/movies", movieController.addMovie)
-api.put("/movies/:id", movieController.updateMovie)
-api.delete("/movies/:id", movieController.deleteMovie)
+//Public routes
+api.post('/signin', userController.signIn);
+api.post('/signup', userController.signUp);
 
+//Protected routes
+api.get("/movies", authenticateTokenMiddleware, movieController.movies)
+api.get("/movies/:id", authenticateTokenMiddleware, movieController.detailMovie)
+api.post("/movies", authenticateTokenMiddleware, movieController.addNewMovie)
+api.put("/movies/:id", authenticateTokenMiddleware, movieController.updateMovie)
+api.delete("/movies/:id", authenticateTokenMiddleware, movieController.deleteMovie)
 
 export default api
